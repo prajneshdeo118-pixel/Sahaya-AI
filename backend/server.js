@@ -19,7 +19,7 @@ const PORT = process.env.PORT || 5000;
 app.post('/api/find-schemes', (req, res) => {
     try {
         const userProfile = req.body;
-        // userProfile should contain: { age, income, category, state }
+        // userProfile should contain: { age, income, category, sector, state }
         
         const eligibleSchemes = filterService.getEligibleSchemes(schemesData, userProfile);
         
